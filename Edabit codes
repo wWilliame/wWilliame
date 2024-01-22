@@ -12,3 +12,6 @@ def remainder(x, y):
 	return x % y
 	
 print(remainder(10, 2))
+
+
+
