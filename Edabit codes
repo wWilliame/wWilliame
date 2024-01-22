@@ -1,0 +1,14 @@
+# Create a function that finds the maximum range of a triangle's third edge, where the side lengths are all integers.
+
+def next_edge(side1, side2):
+	return (side1 + side2)-1
+
+print(next_edge(10, 10))
+
+# There is a single operator in Python, capable of providing the remainder of a division operation. Two numbers are passed as parameters. 
+The first parameter divided by the second parameter will have a remainder, possibly zero. Return that value.
+
+def remainder(x, y):
+	return x % y
+	
+print(remainder(10, 2))
