@@ -1,0 +1,418 @@
+"""
+
+1- num1 = int(input('Enter the first number for addition: '))
+num2 = int(input('Enter the second number for addition: '))
+sum_result = num1 + num2
+print(f'A soma dos numeros é {sum_result}')2
+
+# division
+
+num3
+
+2 - Write a Python program to do arithmetical operations addition and division.
+
+
+num3 = float(input('Enter the dividend for division'))
+num4 = float(input('Enter the dividend for division'))
+if num4 ==0:
+    print('the division by zero isnt allowed')
+else:
+    div_result = num3/num4
+    print(f'A divisão dos numeros é:{div_result}')
+
+3 - Write a Python program to find the area of a triangle.
+
+# input the base and height from the user
+base = float(input('Enter the lenght of the base of the triangle'))
+height = float(input('Enter height of the triangle'))
+# calculate the arear of the triangle
+
+area = 0.5 * base * height
+# display the result
+
+print(f'the area of the triangle is {area} ')
+
+4 -
+
+# write a pythonn program to swap two variable
+# input the variable
+
+a = input('Digite o valor da variavel (a):')
+b = input('Digite o valor da variavel (b):')
+
+#display tghe original values
+
+print(f'original valus: a={a}, b={b}')
+#swap the values using a temporary variable
+temp = a
+a=b
+b = temp
+print(f'swapped values: a={a}, b ={b}')
+
+5 -Write a Python program to generate a random number.
+
+import random
+print(f'random number:{random.randint(1, 100)}')
+
+6 -Write a Python program to convert kilometers to miles.
+kilometros = float(input('entre com a distancia em kilometros'))
+
+# fator conversor 1 kilometros = 0.62123546
+
+fator_conversor = 0.621371
+
+milhas = kilometros*fator_conversor
+
+print(f'{kilometros} kilometros é iguaL A {milhas} milhas')
+
+7 - Write a Python program to convert Celsius to Fahrenheit
+
+celsius = float(input('entre com a temperatura em celsius'))
+# formula convertor: f = celsius*9/5 + 32
+fahr = (celsius * 9/5) + 32
+
+print(f'{celsius} degrees celsius is equal to {fahr} degreees farh')
+
+8- Write a Python program to display calendar.
+
+import calendar
+
+year = int(input('Enter year'))
+month = int(input('entger month'))
+
+cal = calendar.month(year, month)
+print(cal)
+
+9-Write a Python program to solve quadratic equation
+import math
+
+# input the coeffients
+a = float(input('Enter the coeficiente a:'))
+b = float(input('Enter the coeficiente b:'))
+c = float(input('Enter the coeficiente c:'))
+
+# calculate the discriminat
+
+discriminant = b**2 - 4*a*c
+# check if the discrimant is positive, negative or zero
+if discriminant >0:
+    # two real and distinct roots
+    root1 = (-b+math.sqrt(discriminant))/(2*a)
+    root1 = (-b-math.sqrt(discriminant))/(2*a)
+    print(f'root1:{root1}')
+    print(f'root2:{root2}')
+elif discriminant ==0:
+    # one real rooet(repeated)
+    root = -b/(2*a)
+    print(f'root:{root}')
+else:
+    # complex roots
+    real_part= -b/(2*a)
+    imaginary_part = math.sqrt((abs(discriminant))/(2*a))
+    print(f'root 1:{real_part}+{imaginary_part}i')
+    print(f'root 2:{real_part}+{imaginary_part}i')
+
+
+10 -Write a Python program to swap two variables without temp variable.
+
+a = 5
+b = 10
+
+#swapping without a temporary variable
+
+a, b= b, a
+print(f'after swapping')
+print('a=', a)
+print('b=', b)
+
+11-Write a Python Program to Check if a Number is Positive, Negative or Zero.
+
+num =float(input('Enter a number'))
+if num >0:
+    print('Positive number')
+elif num==0:
+    print('zero')
+else:
+    print('Negative number')
+
+    12-Write a Python Program to Check if a Number is Odd or Even
+
+
+num = int(input('Enter a number'))
+if num%2 ==0:
+    print('This is a even number')
+else:
+    print('this is a odd number')
+
+13 -Write a Python Program to Check Leap Year.
+
+year = int(input('Enter the a year:'))
+
+# dividenv by means century year(ending with 00)
+# century year dividend by 400 is leap year
+
+if (year %400==0) and (year%100==0):
+    print('{0} is a leep year'.format(year))
+
+    # not dividev by 100 means not a century year
+    # year devidev by 4 is a leap year
+elif (year%4==0) and (year%100!=0):
+    print('{0} is a leap year'.format(year))
+# if not divendv by both 400(century year) and 4 *(not centyury year)
+# year is not leap year
+else:
+    print('{} is not leap year'.format(year))
+
+    14- Write a Python Program to Check Prime Number.
+    Prime Numbers:
+
+A prime number is a whole number that cannot be evenly divided by any other number
+except for 1 and itself. For example, 2, 3, 5, 7, 11, and 13 are prime numbers because they
+cannot be divided by any other positive integer except for 1 and their own value.
+
+
+num = int(input('Enter a  number'))
+
+flag = False
+
+if num ==1:
+    print(f'{num}, is not a prime number')
+elif num >1:
+    # chjeck for factors
+    for i in range(2, num):
+        if (num%1) ==0:
+            flag =True # if the factor is found, setg flag to true
+            break
+if flag:
+    print(f'{num}, is not a prime number')
+else:
+    print(f'{num}, is a prime number')
+
+15 -Write a Python Program to Print all Prime Numbers in an Interval of 1-10.
+
+lower = 1
+upper = 10
+
+print('Prime numbers between', lower, 'and', upper, 'are:')
+for num in range(lower, upper+1):
+    # all prime number are greater than1
+    if num >1:
+        for i in range(2, num):
+            if (num%i) ==0:
+                break
+        else:
+            print(num)
+
+16 - Write a Python Program to Find the Factorial of a Number.
+
+num = int(input('Enter a number:'))
+factorial =1
+if num <0:
+    print('Factoral does not exist for negative number')
+elif num ==0:
+    print('Factorial of 0 is 1')
+else:
+    for i in range(1, num+1):
+        factorial = factorial*i
+    print(f'the factorial of {num} is {factorial}')
+
+    17 -Write a Python Program to Display the multiplication Table.
+
+
+num = int(input('Display multiplication table of:'))
+
+for i in range(1, 11):
+    print(f'{num}x{i} = {num*i}')
+
+    18- Write a Python Program to Print the Fibonacci sequence.
+
+
+nterms = int(input('how many terms'))
+
+# first two terms
+n1, n2 = 0, 1
+
+count = 0
+
+if nterms  <=0:
+    print('please enter a positive integer')
+elif nterms ==1:
+    print('fibonacci sequence upto', nterms,':')
+    print(n1)
+else:
+    print('Fibonacci sequences:')
+    while count < nterms:
+        print(n1)
+        nth = n1 + n2
+        n1 = n2
+        n2= nth
+        count += 1
+19 - Write a Python Program to Check Armstrong Number?
+
+
+num = int(input('Enter a number: '))
+
+#calculate the number of digits in num
+
+num_str = str(num)
+num_digits = len(num_str)
+
+# initizali variables
+
+sum_of_powers = 0
+temp_num = num
+
+# calcular the suim of digits raises to the power of num_digits
+
+while temp_num>0:
+    digit = temp_num%10
+    sum_of_powers += digit**num_digits
+    temp_num//=10
+
+#check if itsd an armstrong number
+if sum_of_powers==num:
+    print(f'{num} is an armstrong number')
+else:
+    print(f'{num} is not a armstrong number')
+
+    20 -
+Write a Python Program to Find Armstrong Number in an Interval
+
+# input the inteval form the user
+
+lower = int(input('Enter the lower limit of the interval'))
+upper = int(input('Enter the upper limit of the interval'))
+
+for num in range(lower, upper +1):
+    order = len(str(num))
+    temp_num = num
+    sum = 0
+
+    while temp_num >0:
+        digit = temp_num % 10
+        sum += digit ** order
+        temp_num //= 10
+
+        # checkl fi nums is an armstgrong number
+
+        if num ==sum:
+            print(num)
+
+21- Write a Python Program to Find the Sum of Natural Numbers
+Natural numbers are a set of positive integers that are used to count and order objects.
+They are the numbers that typically start from 1 and continue indefinitely, including all the
+whole numbers greater than 0. In mathematical notation, the set of natural numbers is often
+denoted as "N" and can be expressed as:
+𝑁 = 1, 2, 3, 4, 5, 6, 7, 8, . .
+limit =  int(input('Enter the limit:'))
+
+
+# initialie the sum
+
+sum = 0
+
+for i in range(1, limit+1):
+    sum += i
+    # print the sum
+
+print('The sum of natural number up to', limit, 'is', sum)
+
+
+22- Write a Python Program to Find LCM.
+def compute_lcm(x, y):
+    if x >y:
+        greater = x
+    else:
+        greater =y
+    while(True):
+        if((greater % x ==0) and (greater% y ==0)):
+            lcm= greater
+            break
+        greater += 1
+    return lcm
+
+num1 = int(input('Enter the number: '))
+num2 = int(input('Enter the number:'))
+
+print('The L.C.M is', compute_lcm(num1, num2))
+
+23 -Write a Python Program to Find HCF
+
+
+# python program to fin h.c..f of two number
+
+#define a function
+
+def compute_hcf(x, y):
+
+# chose the smaller number
+    if x >y:
+        smaller = y
+    else:
+        smaller = x
+    for i in range(1, smaller+1):
+        if ((x % i ==0)) and (y % i == 0):
+                hcf = i
+    return hcf
+
+num1 = int(input('Enter the number:'))
+num2 = int(input('Enter the number:'))
+print('the HCF is', compute_hcf(num1, num2))
+
+24 -Write a Python Program to Convert Decimal to Binary, Octal and Hexadecimal.
+dec_num = int(input('Enter a decimal number'))
+
+print('the Decimal value of', dec_num, 'is:')
+print(bin(dec_num), 'In binary')
+print(oct(dec_num), 'in octal')
+print(hex(dec_num), 'in hexadecimal')
+
+25-Write a Python Program To Find ASCII value of a character
+
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
